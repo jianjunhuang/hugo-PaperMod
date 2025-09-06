@@ -39,6 +39,7 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+    {{ partial "adsense-inarticle.html" $ }}
   </div>
   {{- end }}
 
@@ -60,6 +61,7 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+  {{ partial "adsense-multiplex.html" $ }}
 </article>
 
 {{- end }}{{/* end main */}}
