@@ -3,4 +3,5 @@
 
 {{- if (and $adsenseEnabled $adsenseAllowedOnPage) }}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{- .Site.Params.adsense.clientID -}}" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="{{- .Site.Params.adsense.clientID -}}">
 {{- end }}
